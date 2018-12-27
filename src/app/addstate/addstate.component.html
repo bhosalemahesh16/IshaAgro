@@ -1,0 +1,28 @@
+<header>Add New State</header>
+
+<div class="container">
+
+        <form #frm="ngForm" (ngSubmit)="onSubmit(frm.value)"> 
+                        <label for="StateName">State Name</label>
+ <input type="text" name="stateName" class="form-control" #stateName="ngModel" required ngModel [(ngModel)]="statename1">
+
+               
+<!--<input type="text" id="StateName" value="" placeholder="state name">-->
+
+<input type="hidden" name="_id" class="form-control" #_id="ngModel" ngModel [(ngModel)]="id">
+
+
+<!-- onclick="history.go(-1); ====it gives o/p other page table -->
+
+    <button type="submit" [disabled]="!frm.valid" class="btn btn-primary" onclick="history.go(-1);">Save</button>
+   
+    <button type="button" class="btn btn-primary">Cancel</button>
+
+  </form>
+
+
+ 
+</div>
+
+
+

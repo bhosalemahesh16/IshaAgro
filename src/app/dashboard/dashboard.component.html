@@ -1,0 +1,64 @@
+
+
+<div class="nav-side-menu">
+  <div class="brand">Isha Agro</div>
+  <div class="menu">
+  <span class="glyphicon glyphicon-dashboard"></span>
+  <a [routerLink]="['/dashboard']"> State Master</a>
+</div>
+</div>
+    
+<!--  <div class="menu-list">
+
+          <ul id="menu-content" class="menu-content collapse out">
+              <li>
+                  <span class="glyphicon glyphicon-dashboard"></span>
+                <a href="#">
+                  <a [routerLink]="['/dashboard']"> State Master</a>
+                  
+                </a>
+              </li>
+          </ul>
+   </div>
+</div>
+
+
+<div class="sidebar">
+  <span class="glyphicon glyphicon-dashboard"><label>Dashboard</label></span>
+  <a [routerLink]="['/dashboard']"> State Master</a>
+
+</div>
+-->
+
+
+<div class="container-fluid">
+  
+  <label>State Master</label>
+  <div class="col-md-12">
+  <button class="btn btn-lg btn-primary pull-right" [routerLink]="['/addstate']" type="button">Add State</button></div>
+  
+
+
+  
+ <!----> <div class="col-md-12">
+    <table class="table table-striped">
+      <thead>
+
+        <tr>
+          <th>StateName</th>
+          <th>Actions</th>
+        </tr>
+
+      </thead>
+      <tbody>
+        <tr *ngFor="let statesDetail of statesDetail;">
+
+          <td>{{statesDetail.stateName}}</td>
+          <td><span><i (click)="editRecord(statesDetail._id)" class="glyphicon glyphicon-pencil"></i></span><span><i (click)="deleteRecord(statesDetail._id)" class="glyphicon glyphicon-trash"></i></span></td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+
+</div>
+
